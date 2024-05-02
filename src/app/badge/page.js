@@ -1,5 +1,5 @@
 import React from "react";
-import Badge from "@/components/Badge";
+import Badge from "@/components/badge";
 export default function page() {
   return (
     <main className="w-full h-full flex items-center justify-center">
