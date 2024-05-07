@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-export default function index({
+export default function Badge({
   title = "Label",
   colors = "neutral",
   size = "small",
