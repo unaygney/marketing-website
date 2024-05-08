@@ -10,30 +10,30 @@ body {
 
 @layer components {
   .link-md {
-    @apply inline-flex items-center gap-1 text-[14px] font-medium text-indigo-700 hover:text-indigo-800;
+    @apply inline-flex items-center gap-1 text-[14px] font-medium text-indigo-700 hover:text-indigo-800 focus:outline-indigo-200 disabled:text-neutral-400;
   }
   .link-lg {
-    @apply inline-flex items-center gap-1.5 text-base font-medium text-indigo-700 hover:text-indigo-800;
+    @apply inline-flex items-center gap-1.5 text-base font-medium text-indigo-700 hover:text-indigo-800 focus:outline-indigo-200 disabled:text-neutral-400;
   }
   .link-xl {
-    @apply inline-flex items-center gap-2 text-base font-medium text-indigo-700 hover:text-indigo-800;
+    @apply inline-flex items-center gap-2 text-base font-medium text-indigo-700 hover:text-indigo-800 focus:outline-indigo-200 disabled:text-neutral-400;
   }
   .link-2xl {
-    @apply inline-flex items-center gap-2.5 text-lg font-medium text-indigo-700 hover:text-indigo-800;
+    @apply inline-flex items-center gap-2.5 text-lg font-medium text-indigo-700 hover:text-indigo-800 focus:outline-indigo-200 disabled:text-neutral-400;
   }
 
   /* Link Gray */
   .link-gray-md {
-    @apply inline-flex items-center gap-1 text-[14px] font-medium text-neutral-600 hover:text-neutral-700;
+    @apply inline-flex items-center gap-1 text-[14px] font-medium text-neutral-600 hover:text-neutral-700 focus:outline-indigo-200 disabled:text-neutral-400;
   }
   .link-gray-lg {
-    @apply inline-flex items-center gap-1.5 text-base font-medium text-neutral-600 hover:text-neutral-700;
+    @apply inline-flex items-center gap-1.5 text-base font-medium text-neutral-600 hover:text-neutral-700 focus:outline-indigo-200 disabled:text-neutral-400;
   }
   .link-gray-xl {
-    @apply inline-flex items-center gap-2 text-base font-medium text-neutral-600 hover:text-neutral-700;
+    @apply inline-flex items-center gap-2 text-base font-medium text-neutral-600 hover:text-neutral-700 focus:outline-indigo-200 disabled:text-neutral-400;
   }
   .link-gray-2xl {
-    @apply inline-flex items-center gap-2.5 text-lg font-medium text-neutral-600 hover:text-neutral-700;
+    @apply inline-flex items-center gap-2.5 text-lg font-medium text-neutral-600 hover:text-neutral-700 focus:outline-indigo-200 disabled:text-neutral-400;
   }
 }
 
