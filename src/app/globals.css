@@ -43,6 +43,10 @@ body {
   }
 }
 
+.custom-background {
+  background: linear-gradient(148deg, #f9fafb 8.89%, #d2d6db 100.48%);
+}
+
 .custom-shadow {
   box-shadow:
     0px 1px 3px 0px rgba(0, 0, 0, 0.1),
