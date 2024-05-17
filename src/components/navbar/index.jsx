@@ -10,7 +10,7 @@ import clsx from "clsx";
 export default function Navbar() {
   const [open, setOpen] = React.useState(false);
   return (
-    <header className="container relative mx-auto flex  h-[68px] items-center  justify-between px-4 py-[18px] md:px-8 xl:justify-start ">
+    <header className=" relative mx-auto flex h-[68px] w-full  max-w-[1336px] items-center  justify-between px-4 py-[18px] md:px-4 xl:justify-start ">
       <Link href="/">
         <Logo />
       </Link>
@@ -26,7 +26,7 @@ export default function Navbar() {
       {/* Mobile Navbar */}
       <nav
         className={clsx(
-          "absolute -top-4 bottom-0 left-0 right-0 h-screen w-0  bg-white px-4 pb-4 pt-8 opacity-0 transition-all duration-300 ease-in-out xl:hidden",
+          "absolute -left-4 -top-4 bottom-0 right-0 h-screen w-0  bg-white px-4 pb-4 pt-8 opacity-0 transition-all duration-300 ease-in-out xl:hidden",
           { " w-[96%] opacity-100 ": open },
         )}
         role="navigation"
