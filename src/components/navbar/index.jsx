@@ -64,7 +64,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="mt-auto  flex flex-col items-center gap-4 ">
+          <div className="mb-8  mt-auto flex flex-col items-center gap-4 ">
             <Button
               className="inline-flex w-full items-center justify-center truncate"
               variant="secondary"
