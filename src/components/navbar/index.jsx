@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Logo from "/public/logo.svg";
 import HamburgerIcon from "/public/hamburger-icon.svg";
@@ -9,6 +9,18 @@ import Button from "../button";
 import clsx from "clsx";
 export default function Navbar() {
   const [open, setOpen] = React.useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
+
   return (
     <header className=" relative mx-auto flex h-[68px] w-full  max-w-[1336px] items-center  justify-between px-4 py-[18px] md:px-4 xl:justify-start ">
       <Link href="/">
