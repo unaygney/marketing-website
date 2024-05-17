@@ -26,7 +26,7 @@ export default function Navbar() {
       {/* Mobile Navbar */}
       <nav
         className={clsx(
-          "absolute -left-4 -top-4 bottom-0 right-0 h-screen w-0  bg-white px-4 pb-4 pt-8 opacity-0 transition-all duration-300 ease-in-out xl:hidden",
+          "absolute -left-4 -top-4 bottom-0 right-0 z-[9999] h-screen w-0  bg-white px-4 pb-4 pt-8 opacity-0 transition-all duration-300 ease-in-out xl:hidden",
           { " w-[96%] opacity-100 ": open },
         )}
         role="navigation"
