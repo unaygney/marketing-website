@@ -1,9 +1,4 @@
-import Navbar from "@/components/navbar";
-
+import MainContainer from "@/containers/main-container";
 export default function Home() {
-  return (
-    <main className="w-full h-full ">
-      <Navbar />
-    </main>
-  );
+  return <MainContainer />;
 }
