@@ -80,7 +80,7 @@ export default function Pricing() {
                 </div>
                 <ul className="flex flex-col gap-5">
                   {plan.features.map((feature, index) => (
-                    <div className="flex items-center gap-3">
+                    <div key={index} className="flex items-center gap-3">
                       <span className="inline-flex flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-indigo-50">
                         <Image
                           src="/images/check.svg"
