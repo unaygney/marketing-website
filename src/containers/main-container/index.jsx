@@ -3,6 +3,7 @@ import Hero from "./hero";
 import Teams from "./teams";
 import PremiumImages from "./premium-images";
 import Features from "./features";
+import Pricing from "./pricing";
 
 export default function MainContainer() {
   return (
@@ -11,6 +12,7 @@ export default function MainContainer() {
       <Teams />
       <PremiumImages />
       <Features />
+      <Pricing />
     </main>
   );
 }
