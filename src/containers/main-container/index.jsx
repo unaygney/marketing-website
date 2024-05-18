@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./hero";
 import Teams from "./teams";
 import PremiumImages from "./premium-images";
+import Features from "./features";
 
 export default function MainContainer() {
   return (
@@ -9,6 +10,7 @@ export default function MainContainer() {
       <Hero />
       <Teams />
       <PremiumImages />
+      <Features />
     </main>
   );
 }
