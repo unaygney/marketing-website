@@ -5,8 +5,14 @@ import * as Tabs from "@radix-ui/react-tabs";
 import { PRICING_DATA } from "./constant";
 import Image from "next/image";
 import Button from "@/components/button";
+import clsx from "clsx";
 
 export default function Pricing() {
+  const pricingPlans = {
+    monthly: PRICING_DATA.monthly.plans,
+    annually: PRICING_DATA.annually.plans,
+  };
+
   return (
     <section
       className="flex flex-col gap-10 bg-white px-3 py-12 md:px-4 md:py-16 xl:p-24"
@@ -18,50 +24,57 @@ export default function Pricing() {
         text="Pick the plan that suits you today and step up as your demands grow - our flexible options have your journey mapped out."
         className="text-center"
       />
-      <Tabs.Root defaultValue="monthly" orientation="vertical">
-        <Tabs.List aria-label="Pricing options" className="flex flex-col">
-          <Tabs.Trigger value="monthly" className="p-2">
-            Monthly
+      <Tabs.Root
+        defaultValue="monthly"
+        orientation="vertical"
+        className="mx-auto w-full xl:max-w-[1216px]"
+      >
+        <Tabs.List
+          aria-label="Pricing options"
+          className="mx-auto mb-12 flex w-full max-w-[312px] items-center justify-center gap-4"
+        >
+          <Tabs.Trigger value="monthly" className="flex-1 ">
+            <Button
+              variant="secondary"
+              className="inline-flex w-full flex-1 items-center justify-center"
+            >
+              Monthly
+            </Button>
           </Tabs.Trigger>
-          <Tabs.Trigger value="annually" className="p-2">
-            Annually
+          <Tabs.Trigger value="annually" className="flex-1 ">
+            <Button
+              variant="secondary"
+              className="inline-flex w-full flex-1 items-center justify-center"
+            >
+              Annually
+            </Button>
           </Tabs.Trigger>
         </Tabs.List>
 
-        <Tabs.Content value="monthly" className="flex flex-col gap-8 ">
-          <>
-            {PRICING_DATA.monthly.plans.map((plan) => (
+        {Object.keys(pricingPlans).map((planType) => (
+          <Tabs.Content
+            key={planType}
+            value={planType}
+            className="flex w-full flex-col gap-8  xl:flex-row"
+          >
+            {pricingPlans[planType].map((plan) => (
               <div
                 key={plan.id}
-                className="flex flex-col gap-8 rounded-lg border border-neutral-200 bg-white p-4 shadow-sm"
+                className={clsx(
+                  "relative flex flex-1 flex-col gap-8 overflow-hidden rounded-lg border border-neutral-200 bg-white p-4 shadow-sm",
+                  { "border-indigo-600 shadow-2xl": plan.isPopular },
+                )}
               >
-                <div>
-                  <h3 className="text-xl font-bold">{plan.title}</h3>
-                  <p className="mt-2">{plan.description}</p>
-                </div>
-                <div>
-                  <p className="mt-2 text-lg font-semibold">${plan.price}</p>
-                  <p>Billed annually(84$)</p>
-                </div>
-                <ul className="flex flex-col gap-5">
-                  {plan.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-                <button>Buy Now</button>
-              </div>
-            ))}
-          </>
-        </Tabs.Content>
-
-        <Tabs.Content value="annually" className="flex flex-col gap-8 ">
-          <>
-            {PRICING_DATA.annually.plans.map((plan) => (
-              <div
-                key={plan.id}
-                className="flex flex-col gap-8 rounded-lg border border-neutral-200 bg-white p-4 shadow-sm"
-              >
-                <div className="flex flex-col gap-2">
+                {plan.isPopular && (
+                  <div className="absolute left-0 right-0 top-0 flex h-[60px] w-full  items-center justify-center bg-indigo-50 text-xl font-bold leading-7  text-indigo-700 ">
+                    Most Popular
+                  </div>
+                )}
+                <div
+                  className={clsx("flex flex-col gap-2", {
+                    "mt-[62px]": plan.isPopular,
+                  })}
+                >
                   <h3 className="text-2xl font-semibold leading-8 text-neutral-900 ">
                     {plan.title}
                   </h3>
@@ -75,7 +88,9 @@ export default function Pricing() {
                     <span className="text-base font-normal">/month</span>
                   </p>
                   <p className="text-base font-normal leading-6 text-neutral-600">
-                    Billed annually(84$)
+                    {planType === "annually"
+                      ? `Billed annually (${Math.floor(plan.price * 12)}$)`
+                      : "Billed monthly"}
                   </p>
                 </div>
                 <ul className="flex flex-col gap-5">
@@ -93,13 +108,17 @@ export default function Pricing() {
                     </div>
                   ))}
                 </ul>
-                <Button variant="secondary" size="normal" className={"h-12"}>
+                <Button
+                  variant={plan.isPopular ? "primary" : "secondary"}
+                  size="normal"
+                  className={"mt-auto h-12"}
+                >
                   Buy Now
                 </Button>
               </div>
             ))}
-          </>
-        </Tabs.Content>
+          </Tabs.Content>
+        ))}
       </Tabs.Root>
     </section>
   );
