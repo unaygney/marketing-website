@@ -5,6 +5,7 @@ import PremiumImages from "./premium-images";
 import Features from "./features";
 import Pricing from "./pricing";
 import Faqs from "./faqs";
+import Newsletter from "./newsletter";
 
 export default function MainContainer() {
   return (
@@ -15,6 +16,7 @@ export default function MainContainer() {
       <Features />
       <Pricing />
       <Faqs />
+      <Newsletter />
     </main>
   );
 }
