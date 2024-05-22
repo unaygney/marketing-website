@@ -8,6 +8,13 @@ body {
   height: 100%;
 }
 
+.AccordionChevron {
+  transition: transform 300ms;
+}
+div[data-state="open"] > * .AccordionChevron {
+  transform: rotate(180deg);
+}
+
 @layer components {
   .link-md {
     @apply inline-flex items-center gap-1 text-[14px] font-medium text-indigo-700 hover:text-indigo-800 focus:outline-indigo-200 disabled:text-neutral-400;
