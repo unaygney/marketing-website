@@ -35,7 +35,7 @@ export default function index() {
       <div className="flex w-full flex-col items-center  justify-between gap-4 rounded-lg border border-neutral-200 p-4 shadow-md md:flex-row md:p-8">
         <div className="flex flex-col gap-2">
           <h5 className="text-xl font-semibold leading-7 text-neutral-900">
-            Can't find the answer you're looking for?
+            Cannot find the answer you are looking for?
           </h5>
           <p className="text-base font-normal leading-6 text-neutral-600">
             Reach out to our{" "}
