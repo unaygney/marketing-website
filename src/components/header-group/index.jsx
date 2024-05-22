@@ -23,7 +23,7 @@ export default function HeaderGroup({
 }
 
 HeaderGroup.propTypes = {
-  smallTitle: PropTypes.string.isRequired,
+  smallTitle: PropTypes.string,
   mainTitle: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   className: PropTypes.string,
