@@ -6,6 +6,7 @@ import Features from "./features";
 import Pricing from "./pricing";
 import Faqs from "./faqs";
 import Newsletter from "./newsletter";
+import Contact from "./contact";
 
 export default function MainContainer() {
   return (
@@ -17,6 +18,7 @@ export default function MainContainer() {
       <Pricing />
       <Faqs />
       <Newsletter />
+      <Contact />
     </main>
   );
 }

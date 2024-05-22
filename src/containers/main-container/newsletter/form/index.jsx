@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { useState } from "react";
 import Button from "@/components/button";
 import { validateEmail } from "@/utils/helpers";
-export default function index() {
+export default function Form() {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (event) => {
