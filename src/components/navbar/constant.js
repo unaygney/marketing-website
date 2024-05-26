@@ -22,6 +22,6 @@ export const LINKS = [
   {
     id: 4,
     label: "Contact",
-    path: "/contact",
+    path: "/contact-us",
   },
 ];
