@@ -40,19 +40,19 @@ export default function Hero() {
 
       <figure className="relative h-[264px] w-full md:h-[526px] xl:h-[526px] xl:w-[696px] ">
         <Image
-          src={"/images/hero-image-mobile.png"}
+          src={"/images/features-hero-mobile.png"}
           alt="abstract gradient background for mobile"
           fill
           className="md:hidden"
         />
         <Image
-          src={"/images/hero-image-tablet.png"}
+          src={"/images/features-hero-tablet.png"}
           alt="abstract gradient background for tablet"
           fill
           className="hidden md:block xl:hidden"
         />
         <Image
-          src={"/images/hero-image-desktop.png"}
+          src={"/images/features-hero-desktop.png"}
           alt="abstract gradient background for desktop"
           fill
           className="hidden  xl:block"

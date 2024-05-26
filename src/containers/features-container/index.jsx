@@ -5,6 +5,7 @@ import Features from "./features";
 import Faqs from "./faqs";
 import Contact from "./contact";
 import Testimonials from "./testimonials";
+
 export default function FeaturesContainer() {
   return (
     <main>
