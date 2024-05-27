@@ -1,10 +1,20 @@
 import React from "react";
-import Badge from "@/components/badge";
+import Input from "@/components/input";
+
+const inputValue = {
+  name: "email",
+  placeholder: "Testing",
+  hint: "This is a hint text",
+  label: "Test",
+  type: "text",
+  id: "email",
+};
+
 export default function page() {
   return (
-    <main className="w-full h-full flex items-center justify-center">
+    <main className="flex h-full w-full items-center justify-center">
       <div>
-        <div className="flex flex-col gap-6">
+        {/* <div className="flex flex-col gap-6">
           <div className="flex items-center gap-6">
             {Array(3)
               .fill(null)
@@ -100,7 +110,9 @@ export default function page() {
                 />
               ))}
           </div>
-        </div>
+        </div> */}
+
+        <Input {...inputValue} />
       </div>
     </main>
   );
